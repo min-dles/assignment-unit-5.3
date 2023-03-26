@@ -53,3 +53,18 @@ console.log(findByArtist('Bad Bunny')); // testing for multiple matches
 console.log(findByArtist('Coco & Clair Clair')); // testing for artists not in collection
 // (also tried adding the album to the collection via console, and it worked!)
 console.log(findByArtist('Silverstein')); // testing for one match.
+
+function search(album) {
+    let searchFunctionMatches = [];
+    if (album == collection.album){
+        searchFunctionMatches.push(collection.album);
+    } else if (album === []){
+        return collection;
+    }
+    return searchFunctionMatches;
+}
+
+// writing a test below:
+console.log('Test 1:', search({artist: 'Ray Charles', year: 1957})); // empty array
+console.log('Test 2:', search({artist: 'Hayley Kiyoko', year: 2018})); // empty array; need loop
+// after testing this code, I realize that a loop is needed, and a conditional || statement
