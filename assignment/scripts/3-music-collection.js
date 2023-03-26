@@ -26,3 +26,15 @@ console.log(addToCollection('blue water road', 'Kehlani', 2022));
 console.log(addToCollection('Isolation', 'Kali Uchis', 2018));
 console.log(addToCollection('YHLQMDLG', 'Bad Bunny', 2020));
 // completed tests; also tested collection variable in the console
+
+console.log('Testing collection array:', collection);
+
+function showCollection(collection) {
+    console.log('There are this many albums in the collection:', collection.length);
+    for(let i = 0; i < collection.length; i++){
+        console.log(collection[i]);
+   } // end for loop to each item in array 
+} // end function showCollection
+
+showCollection(collection);
+// first iteration of this feature; need showCollection to console.log differently
