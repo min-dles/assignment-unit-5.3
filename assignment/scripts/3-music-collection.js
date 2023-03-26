@@ -32,9 +32,9 @@ console.log('Testing collection array:', collection);
 function showCollection(collection) {
     console.log('There are this many albums in the collection:', collection.length);
     for(let i = 0; i < collection.length; i++){
-        console.log(collection[i]);
+        console.log(collection[i].title + ' by ' + collection[i].artist + ', published in '+ collection[i].yearPublished);
    } // end for loop to each item in array 
 } // end function showCollection
 
 showCollection(collection);
-// first iteration of this feature; need showCollection to console.log differently
+// second iteration of this feature; used concatenation to log each property in the object in the array
