@@ -6,15 +6,15 @@ console.log('Here is an empty array:', collection);
 
 function addToCollection(title, artist, yearPublished) {
     console.log('Testing this function:');
-    let album = {
-        title: '',
-        artist: '',
-        yearPublished: ''
-    }; // end object 
-    collection.push(album);
-    return album;
+        this.title = title;
+        this.artist = artist;
+        this.yearPublished = yearPublished;
+   // }; // end object function 
+    collection.push(Album);
+    return Album;
 }
 
-console.log(addToCollection('Citrine', 'Hayley Kiyoko', '2016'));
+console.log(addToCollection('Citrine', 'Hayley Kiyoko', 2016));
 console.log(collection);
-// this is my first iteration of the function; it didn't work
+// this is my second iteration of the function; referring MDN lessons about constructor functions
+// this isn't working; going back to previous iteration and trying again
