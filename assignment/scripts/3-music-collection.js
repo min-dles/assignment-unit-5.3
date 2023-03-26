@@ -7,9 +7,9 @@ console.log('Here is an empty array:', collection);
 function addToCollection(title, artist, yearPublished) {
     console.log('Testing this function:');
     let album = {
-        title,
-        artist,
-        yearPublished
+        title: title,
+        artist: artist,
+        yearPublished: yearPublished
     }
     collection.push(album);
     return album;
@@ -17,4 +17,4 @@ function addToCollection(title, artist, yearPublished) {
 
 console.log(addToCollection('Citrine', 'Hayley Kiyoko', 2016));
 console.log(collection);
-// third iteration; simplified from iteration one
+// third iteration; restructured from iteration one to be clearer for my purposes
