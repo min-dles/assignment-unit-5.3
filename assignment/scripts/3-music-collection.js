@@ -49,22 +49,38 @@ function findByArtist(artist) {
     return artistMatches; // return the array for all matches (empty if none)
 } // end findbyArtist function
 
-console.log(findByArtist('Bad Bunny')); // testing for multiple matches
-console.log(findByArtist('Coco & Clair Clair')); // testing for artists not in collection
+console.log('Test 1 findByArtist:', findByArtist('Bad Bunny')); // testing for multiple matches
+console.log('Test 2 findByArtist:', findByArtist('Coco & Clair Clair')); // testing for artists not in collection
 // (also tried adding the album to the collection via console, and it worked!)
-console.log(findByArtist('Silverstein')); // testing for one match.
+console.log('Test 3 findByArtist:', findByArtist('Silverstein')); // testing for one match.
+
+//STRETCH GOAL(S):
+console.log('***STRETCH GOAL(S) BELOW***');
 
 function search(album) {
     let searchFunctionMatches = [];
+    for (let album of collection){
+        if (album === album.artist || album === album.yearPublished){
+            searchFunctionMatches.push(); // after testing, there needs to be a value pushed
+        }
+    } // end part one of the function; loop to check for matches
+    if (album == null){
+        return collection;
+    } else {
+    return searchFunctionMatches;
+    } // end part two of the function; check for empty array
+} // end search function 
+    /*
     if (album == collection.album){
         searchFunctionMatches.push(collection.album);
     } else if (album === []){
         return collection;
     }
     return searchFunctionMatches;
-}
+}*/
 
 // writing a test below:
-console.log('Test 1:', search({artist: 'Ray Charles', year: 1957})); // empty array
-console.log('Test 2:', search({artist: 'Hayley Kiyoko', year: 2018})); // empty array; need loop
+console.log('Test 1 search:', search({artist: 'Ray Charles', year: 1957})); // empty array
+console.log('Test 2 search:', search({artist: 'Hayley Kiyoko', year: 2018})); // empty array; need loop
+console.log('Test 3 search:', search()); // testing empty parameter - should be collection
 // after testing this code, I realize that a loop is needed, and a conditional || statement
