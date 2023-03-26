@@ -33,8 +33,22 @@ function showCollection(collection) {
     console.log('There are this many albums in the collection:', collection.length);
     for(let i = 0; i < collection.length; i++){
         console.log(collection[i].title + ' by ' + collection[i].artist + ', published in '+ collection[i].yearPublished);
-   } // end for loop to each item in array 
+   } // end for loop to each property of object in array 
 } // end function showCollection
 
 showCollection(collection);
 // second iteration of this feature; used concatenation to log each property in the object in the array
+
+function findByArtist(artist) {
+    let artistMatches = [];
+    for(let artist of collection.album){
+        if(artist != artist){
+            console.log('no match');
+        } else {
+            artistMatches.push(artist);
+            console.log('There was a match:', artistMatches);
+        }
+    }
+}
+
+console.log(findByArtist('Bad Bunny'));
