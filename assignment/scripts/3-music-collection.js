@@ -52,4 +52,4 @@ function findByArtist(artist) {
 console.log(findByArtist('Bad Bunny')); // testing for multiple matches
 console.log(findByArtist('Coco & Clair Clair')); // testing for artists not in collection
 // (also tried adding the album to the collection via console, and it worked!)
-console.log(findByArtist('Silverstein')); // testing for one match
+console.log(findByArtist('Silverstein')); // testing for one match.
