@@ -5,14 +5,14 @@ console.log('Here is an empty array:', collection);
 //this was the first feature; checking console that it's working
 
 function addToCollection(title, artist, yearPublished) {
-    console.log('Testing addToCollection, return value below:');
+    console.log('Album below was added to your collection:');
     let album = {
-        title: title,
+        title: title, // left of colon is Property, right is Parameter
         artist: artist,
         yearPublished: yearPublished
-    }
-    collection.push(album);
-    return album;
+    } // end object 
+    collection.push(album); // add object to collection array
+    return album; // return the object in console
 }
 
 console.log(addToCollection('Citrine', 'Hayley Kiyoko', 2016));
@@ -41,14 +41,15 @@ showCollection(collection);
 
 function findByArtist(artist) {
     let artistMatches = [];
-    for(let artist of collection.album){
-        if(artist != artist){
-            console.log('no match');
-        } else {
-            artistMatches.push(artist);
-            console.log('There was a match:', artistMatches);
-        }
-    }
-}
+    for(let album of collection){
+        if(album.artist === artist){
+            artistMatches.push(album);
+        } // end conditional checking for matches
+    } // end loop
+    return artistMatches; // return the array for all matches (empty if none)
+} // end findbyArtist function
 
-console.log(findByArtist('Bad Bunny'));
+console.log(findByArtist('Bad Bunny')); // testing for multiple matches
+console.log(findByArtist('Coco & Clair Clair')); // testing for artists not in collection
+// (also tried adding the album to the collection via console, and it worked!)
+console.log(findByArtist('Silverstein')); // testing for one match
